@@ -4,15 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>D'Maria Decorações</title>
+    <link rel="shortcut icon" href="./images/dmarialogo-removebg.png" type="image/x-icon">
     <link rel="stylesheet" href="./css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 
 <body>
-    <header class="d-flex justify-content-md-around justify-content-around light-background">
-        <img src="./images/dmarialogo.png" alt="Logo D'Maria Decorações">
+    <header class="d-flex justify-content-between padding-container light-background">
+        <!-- RECORTAR AS LATERAIS DA LOGO PRA HEADER FICAR CORRETA -->
+        <img src="./images/dmarialogo.png" alt="Logo D'Maria Decorações" class="">
+        <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
 
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
@@ -22,12 +25,10 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                <!-- O Offcanvas se transforma em navbar normal em telas grandes -->
                 <div class="offcanvas offcanvas-end text-bg light-background" tabindex="-1" id="offcanvasNavbar"
                     aria-labelledby="offcanvasNavbarLabel">
                     <div class="offcanvas-header ">
                         <h5 class="offcanvas-title medium-color" id="offcanvasNavbarLabel">D'Maria Decorações</h5>
-                        <!-- Botão de fechar só aparece no mobile -->
                         <button type="button" class="btn-close btn-close d-lg-none" data-bs-dismiss="offcanvas"
                             aria-label="Close"></button>
                     </div>
@@ -68,8 +69,75 @@
             você pode comprar produtos para sua festa!
         </p>
     </section>
-    <main>
+    <main class="light-background padding-container pt-4">
+        <h4>Para Comprar</h4>
 
+        <section class="products d-flex">
+
+
+
+            <div class="card dmaria-card" >
+                <img src="./images/product_images/colherDescartavel.png" alt="Pacote Colher Descartável 50 unidades"
+                    class="buy-product card">
+                <div class="card-body">
+                    <p class="card-text">
+                        Pacote de Colher Descartável marca TAL 50 unidades
+                    </p>
+                    <p class="fw-bold"> R$ 50,00 </p>
+                    <button class="btn bg-primary">Expandir</button>
+                </div>
+            </div>
+
+            <div class="card dmaria-card" >
+                <img src="./images/product_images/colherDescartavel.png" alt="Pacote Colher Descartável 50 unidades"
+                    class="buy-product card">
+                <div class="card-body">
+                    <p class="card-text">
+                        Pacote de Colher Descartável marca TAL 50 unidades
+                    </p>
+                    <p class="fw-bold"> R$ 50,00 </p>
+                    <button class="btn bg-primary">Expandir</button>
+                </div>
+            </div>
+
+
+            <div class="card dmaria-card" >
+                <img src="./images/product_images/colherDescartavel.png" alt="Pacote Colher Descartável 50 unidades"
+                    class="buy-product card">
+                <div class="card-body">
+                    <p class="card-text">
+                        Pacote de Colher Descartável marca TAL 50 unidades
+                    </p>
+                    <p class="fw-bold"> R$ 50,00 </p>
+                    <button class="btn bg-primary">Expandir</button>
+                </div>
+            </div>
+
+            <div class="card dmaria-card" >
+                <img src="./images/product_images/colherDescartavel.png" alt="Pacote Colher Descartável 50 unidades"
+                    class="buy-product card">
+                <div class="card-body">
+                    <p class="card-text">
+                        Pacote de Colher Descartável marca TAL 50 unidades
+                    </p>
+                    <p class="fw-bold"> R$ 50,00 </p>
+                    <button class="btn bg-primary">Expandir</button>
+                </div>
+            </div>
+
+            <div class="card dmaria-card" >
+                <img src="./images/product_images/colherDescartavel.png" alt="Pacote Colher Descartável 50 unidades"
+                    class="buy-product card">
+                <div class="card-body">
+                    <p class="card-text">
+                        Pacote de Colher Descartável marca TAL 50 unidades
+                    </p>
+                    <p class="fw-bold"> R$ 50,00 </p>
+                    <button class="btn bg-primary">Expandir</button>
+                </div>
+            </div>
+
+        </section>
 
     </main>
 
