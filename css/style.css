@@ -32,45 +32,81 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: black;
+
     & img {
         height: 6rem;
     }
 }
 
-.padding-container {
-        padding: 0 20%;
+ul {
+    :hover {
+        color: black !important;
+        background-color: #e0daca !important;
+    }
 }
 
-.buy-product{
+select, select::picker(select) {
+  appearance: base-select;
+  border: none;
+}
+select::picker-icon {
+    display: block;
+    content:icon('');
+}
+
+option {
+    background-color: #e0daca;
+}
+option::checkmark{
+    display: none;
+}
+
+/* Agora você pode mudar o fundo no hover */
+option:hover {
+  background-color: transparent; 
+  color: #95783e;
+}
+
+.padding-container {
+    padding: 0 20%;
+}
+
+.buy-product {
     height: 20rem;
 }
 
-.card-img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-.products{
+.products {
     flex-wrap: wrap;
     justify-content: space-around;
     gap: 1rem;
 }
 
-.dmaria-card{
-    width: 20rem;
-    max-height: 35rem;
-    & button{
+.dmaria-card {
+    width: 20rem !important;
+    height: 35rem !important;
+
+    & button {
         color: white;
     }
 }
 
-.request-button{
+.card-img {
+    width: 100%;
+    height: 27rem !important;
+    object-fit: cover;
+    display: block;
+}
+
+.price-and-expand {
+    align-self: flex-end;
+}
+
+.request-button {
     background-color: #25D366 !important;
 
-    & i{
+    & i {
         font-size: 2rem;
     }
 }
@@ -87,4 +123,3 @@ header {
         padding: 0 4rem;
     }
 }
-
