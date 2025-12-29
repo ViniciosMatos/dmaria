@@ -42,6 +42,13 @@ header {
     height: 20rem;
 }
 
+.card-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
 .products{
     flex-wrap: wrap;
     justify-content: space-around;
@@ -50,11 +57,19 @@ header {
 
 .dmaria-card{
     width: 20rem;
+    max-height: 35rem;
     & button{
         color: white;
     }
 }
 
+.request-button{
+    background-color: #25D366 !important;
+
+    & i{
+        font-size: 2rem;
+    }
+}
 
 
 @media screen and (max-width: 767px) {
