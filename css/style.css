@@ -111,6 +111,13 @@ option:hover {
     }
 }
 
+section.hidden{
+    display: none !important;
+}
+.hidden > *{
+    display: none !important;
+}
+
 
 @media screen and (max-width: 767px) {
     .padding-container {
