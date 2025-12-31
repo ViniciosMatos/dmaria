@@ -1,8 +1,8 @@
-/* *{
+*{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-} */
+}
 
 .light-background {
     background-color: #e0daca !important;
@@ -32,7 +32,6 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     color: black;
 
     & img {
@@ -55,9 +54,14 @@ select::picker-icon {
     display: block;
     content:icon('');
 }
+select{
+    display: flex !important;
+    flex-direction: row !important;
+}
 
 option {
     background-color: #e0daca;
+    display: flex;
 }
 option::checkmark{
     display: none;
@@ -103,7 +107,7 @@ option:hover {
     align-self: flex-end;
 }
 
-.request-button {
+.whatsapp-button {
     background-color: #25D366 !important;
 
     & i {
@@ -118,6 +122,67 @@ section.hidden{
     display: none !important;
 }
 
+.carrinho-infos{
+    position: absolute;
+    right: 0;
+    margin: 1rem;
+    width: 22rem;
+    border-left: 1px solid #95783e;
+}
+
+#lista-do-carrinho {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.carrinho-compras{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.item-carrinho{
+    display: flex;
+    width: 100%;
+    gap: 1rem;
+
+    & img{
+        width: 4rem;
+        border: 1px solid;
+        border-radius: 0.2rem
+    };  
+    & .item-valor{
+        display: flex;
+        gap: 10rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media screen and (max-width: 767px) {
     .padding-container {
@@ -129,4 +194,10 @@ section.hidden{
     .padding-container {
         padding: 0 4rem;
     }
+}
+
+.btn-check:checked + .btn {
+    background-color: #95783e !important; /* Sua cor medium-background */
+    border-color: #95783e !important;
+    color: #fff !important; /* Texto branco para contraste */
 }

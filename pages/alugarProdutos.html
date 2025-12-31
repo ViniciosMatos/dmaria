@@ -17,62 +17,70 @@
 <body>
 
     <!-- HEADER -->
-    <header class="d-flex justify-content-between padding-container light-background">
+    <header class="d-flex justify-content-between padding-container light-background shadow-sm">
         <!-- RECORTAR AS LATERAIS DA LOGO PRA HEADER FICAR CORRETA -->
         <img src="../images/dmarialogo.png" alt="Logo D'Maria Decorações">
         <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
 
-        <nav class="navbar navbar-expand-lg">
-            <div class="container-fluid">
+        <div class="right-side d-flex align-items-center">
+            <a href="./carrinhoCompras.html">
+                <i class="fa-solid fa-cart-shopping medium-color fs-5"></i>
+            </a>
 
-                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
 
-                <div class="offcanvas offcanvas-end text-bg light-background" tabindex="-1" id="offcanvasNavbar"
-                    aria-labelledby="offcanvasNavbarLabel">
-                    <div class="offcanvas-header ">
-                        <h5 class="offcanvas-title medium-color" id="offcanvasNavbarLabel">D'Maria Decorações</h5>
-                        <button type="button" class="btn-close btn-close d-lg-none" data-bs-dismiss="offcanvas"
-                            aria-label="Close"></button>
-                    </div>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
 
-                    <div class="offcanvas-body">
+                    <div class="offcanvas offcanvas-end text-bg light-background" tabindex="-1" id="offcanvasNavbar"
+                        aria-labelledby="offcanvasNavbarLabel">
+                        <div class="offcanvas-header ">
+                            <h5 class="offcanvas-title medium-color" id="offcanvasNavbarLabel">D'Maria Decorações</h5>
+                            <button type="button" class="btn-close btn-close d-lg-none" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
 
-                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                            <li class="nav-item ">
-                                <a class="nav-link medium-color" aria-current="page" href="../index.html">Início</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle medium-color" href="#" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    Serviços
-                                </a>
-                                <ul class="dropdown-menu dropdown-menu light-background">
-                                    <li><a class="dropdown-item medium-color"
-                                            href="./alugarProdutos.html?category=bolo">Bolo
-                                            Fake</a></li>
-                                    <li><a class="dropdown-item medium-color" href="./decoracao.html">Decorações</a>
-                                    </li>
-                                    <li><a class="dropdown-item medium-color" href="./comprarProdutos.html">Para
-                                            Comprar</a></li>
-                                    <li><a class="dropdown-item medium-color"
-                                            href="./alugarProdutos.html?category=monte">Pegue e
-                                            Monte</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link medium-color" href="#">Sobre Nós</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link medium-color" href="#">Contatos</a>
-                            </li>
-                        </ul>
+                        <div class="offcanvas-body">
+
+                            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                                <li class="nav-item ">
+                                    <a class="nav-link medium-color" aria-current="page" href="../index.html">Início</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle medium-color" href="#" role="button"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        Serviços
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-menu light-background">
+                                        <li><a class="dropdown-item medium-color"
+                                                href="./alugarProdutos.html?category=bolo">Bolo
+                                                Fake</a></li>
+                                        <li><a class="dropdown-item medium-color" href="./decoracao.html">Decorações</a>
+                                        </li>
+                                        <li><a class="dropdown-item medium-color" href="./comprarProdutos.html">Para
+                                                Comprar</a></li>
+                                        <li><a class="dropdown-item medium-color"
+                                                href="./alugarProdutos.html?category=monte">Pegue e
+                                                Monte</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link medium-color" href="#">Sobre Nós</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link medium-color" href="#">Contatos</a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </nav>
+            </nav>
+
+        </div>
     </header>
 
     <!-- AVISO -->
@@ -93,15 +101,47 @@
     <!-- MAIN -->
     <main class="light-background padding-container pt-4 pb-4">
 
-        <div class="d-flex justify-content-between ">
-            <!-- DROPDOWN -->
-            <select class="fs-4 fw-semibold  light-background ">
-                <option selected value="selectMonte" class="fw-semibold py-2">Pegue e Monte Kits</option>
-                <option value="selectMiniMonte" class="fw-semibold py-2" id="selectMiniMonte">Pegue e Monte Mini Kits
-                </option>
-                <option value="selectBolo" class="fw-semibold py-2">Bolo Fake</option>
-            </select>
+        <div class="d-flex gap-2 justify-content-center mb-3" id="radio-filter">
+
+            <input type="radio" class="btn-check" name="categoryFilter" id="radioCachepo" value="selectCachepo">
+            <label class="btn  fw-semibold" for="radioCachepo">
+                Cachepo
+            </label>
+
+            <input type="radio" class="btn-check" name="categoryFilter" id="radioMonte" value="selectMonte" checked>
+            <label class="btn  fw-semibold" for="radioMonte">
+                Kits Pegue e Monte
+            </label>
+
+            <input type="radio" class="btn-check" name="categoryFilter" id="radioMini" value="selectMiniMonte">
+            <label class="btn  fw-semibold" for="radioMini">
+                Mini Kits
+            </label>
+
+            <input type="radio" class="btn-check" name="categoryFilter" id="radioMesa" value="selectMesa">
+            <label class="btn  fw-semibold" for="radioMesa">
+                Mesas
+            </label>
+
+            <input type="radio" class="btn-check" name="categoryFilter" id="radioPainel" value="selectPainel">
+            <label class="btn  fw-semibold" for="radioPainel">
+                Painéis
+            </label>
+
+            <input type="radio" class="btn-check" name="categoryFilter" id="radioTapete" value="selectTapete">
+            <label class="btn  fw-semibold" for="radioTapete">
+                Tapetes
+            </label>
+
+            <input type="radio" class="btn-check" name="categoryFilter" id="radioBolo" value="selectBolo">
+            <label class="btn  fw-semibold" for="radioBolo">
+                Bolo Fake
+            </label>
+
         </div>
+
+        <!-- CACHEPO -->
+        <section class="produts d-flex" id="cachepo"></section>
 
         <!-- PEGUE E MONTE KIT-->
         <section class="products d-flex " id="normalKits">
@@ -119,366 +159,11 @@
 
                         <p class="fw-semibold">CÓDIGO: 001</p>
                     </div>
-                </div>
-            </div>
-
-            <div class="card dmaria-card buy-product">
-                <img src="../images/alugar/pegue_e_monte/kit/bebe_de_terno_kit.png"
-                    alt="Pacote Colher Descartável 50 unidades" class="card-img">
-                <div class="card-body d-flex flex-column justify-content-between">
-                    <p class="card-text">
-                        Kit Pegue e Monte | Poderosa Chefinha
-                    </p>
-                    <div class="d-flex justify-content-between">
-                        <p class="fw-bold"> R$ 50,00 </p>
-
-                        <p class="fw-semibold">CÓDIGO: 002</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card dmaria-card buy-product">
-                <img src="../images/alugar/pegue_e_monte/kit/bolofofos_kit.png"
-                    alt="Pacote Colher Descartável 50 unidades" class="card-img">
-                <div class="card-body d-flex flex-column justify-content-between">
-                    <p class="card-text">
-                        Kit Pegue e Monte | Bolofofos
-                    </p>
-                    <div class="d-flex justify-content-between">
-                        <p class="fw-bold"> R$ 50,00 </p>
-
-                        <p class="fw-semibold">CÓDIGO: 003</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card dmaria-card buy-product">
-                <img src="../images/alugar/pegue_e_monte/kit/branca_de_neve_kit.png"
-                    alt="Pacote Colher Descartável 50 unidades" class="card-img">
-                <div class="card-body d-flex flex-column justify-content-between">
-                    <p class="card-text">
-                        Mini Kit Pegue e Monte | Bobbie Goods
-                    </p>
-                    <div class="d-flex justify-content-between">
-                        <p class="fw-bold"> R$ 50,00 </p>
-
-                        <p class="fw-semibold">CÓDIGO: 004</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card dmaria-card buy-product">
-                <img src="../images/alugar/pegue_e_monte/kit/carros_pixar_kit.png"
-                    alt="Pacote Colher Descartável 50 unidades" class="card-img">
-                <div class="card-body d-flex flex-column justify-content-between">
-                    <p class="card-text">
-                        Mini Kit Pegue e Monte | Bobbie Goods
-                    </p>
-                    <div class="d-flex justify-content-between">
-                        <p class="fw-bold"> R$ 50,00 </p>
-
-                        <p class="fw-semibold">CÓDIGO: 005</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card dmaria-card buy-product">
-                <img src="../images/alugar/pegue_e_monte/kit/cinderela_kit.png"
-                    alt="Pacote Colher Descartável 50 unidades" class="card-img">
-                <div class="card-body d-flex flex-column justify-content-between">
-                    <p class="card-text">
-                        Mini Kit Pegue e Monte | Bobbie Goods
-                    </p>
-                    <div class="d-flex justify-content-between">
-                        <p class="fw-bold"> R$ 50,00 </p>
-
-                        <p class="fw-semibold">CÓDIGO: 006</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card dmaria-card buy-product">
-                <img src="../images/alugar/pegue_e_monte/kit/cowboys_kit.png"
-                    alt="Pacote Colher Descartável 50 unidades" class="card-img">
-                <div class="card-body d-flex flex-column justify-content-between">
-                    <p class="card-text">
-                        Mini Kit Pegue e Monte | Bobbie Goods
-                    </p>
-                    <div class="d-flex justify-content-between">
-                        <p class="fw-bold"> R$ 50,00 </p>
-
-                        <p class="fw-semibold">CÓDIGO: 007</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card dmaria-card buy-product">
-                <img src="../images/alugar/pegue_e_monte/kit/dino_baby_kit.png"
-                    alt="Pacote Colher Descartável 50 unidades" class="card-img">
-                <div class="card-body d-flex flex-column justify-content-between">
-                    <p class="card-text">
-                        Mini Kit Pegue e Monte | Bobbie Goods
-                    </p>
-                    <div class="d-flex justify-content-between">
-                        <p class="fw-bold"> R$ 50,00 </p>
-
-                        <p class="fw-semibold">CÓDIGO: 008</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card dmaria-card buy-product">
-                <img src="../images/alugar/pegue_e_monte/kit/dinorauros_kit.png"
-                    alt="Pacote Colher Descartável 50 unidades" class="card-img">
-                <div class="card-body d-flex flex-column justify-content-between">
-                    <p class="card-text">
-                        Mini Kit Pegue e Monte | Bobbie Goods
-                    </p>
-                    <div class="d-flex justify-content-between">
-                        <p class="fw-bold"> R$ 50,00 </p>
-
-                        <p class="fw-semibold">CÓDIGO: 009</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card dmaria-card buy-product">
-                <img src="../images/alugar/pegue_e_monte/kit/fazenda_kit.jpeg"
-                    alt="Pacote Colher Descartável 50 unidades" class="card-img">
-                <div class="card-body d-flex flex-column justify-content-between">
-                    <p class="card-text">
-                        Mini Kit Pegue e Monte | Bobbie Goods
-                    </p>
-                    <div class="d-flex justify-content-between">
-                        <p class="fw-bold"> R$ 50,00 </p>
-
-                        <p class="fw-semibold">CÓDIGO: 010</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card dmaria-card buy-product">
-                <img src="../images/alugar/pegue_e_monte/kit/festa_kit.png" alt="Pacote Colher Descartável 50 unidades"
-                    class="card-img">
-                <div class="card-body d-flex flex-column justify-content-between">
-                    <p class="card-text">
-                        Mini Kit Pegue e Monte | Bobbie Goods
-                    </p>
-                    <div class="d-flex justify-content-between">
-                        <p class="fw-bold"> R$ 50,00 </p>
-
-                        <p class="fw-semibold">CÓDIGO: 011</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card dmaria-card buy-product">
-                <img src="../images/alugar/pegue_e_monte/kit/galinha_pintadinha_kit.png"
-                    alt="Pacote Colher Descartável 50 unidades" class="card-img">
-                <div class="card-body d-flex flex-column justify-content-between">
-                    <p class="card-text">
-                        Mini Kit Pegue e Monte | Bobbie Goods
-                    </p>
-                    <div class="d-flex justify-content-between">
-                        <p class="fw-bold"> R$ 50,00 </p>
-
-                        <p class="fw-semibold">CÓDIGO: 012</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card dmaria-card buy-product">
-                <img src="../images/alugar/pegue_e_monte/kit/hotwheels_kit.png"
-                    alt="Pacote Colher Descartável 50 unidades" class="card-img">
-                <div class="card-body d-flex flex-column justify-content-between">
-                    <p class="card-text">
-                        Mini Kit Pegue e Monte | Bobbie Goods
-                    </p>
-                    <div class="d-flex justify-content-between">
-                        <p class="fw-bold"> R$ 50,00 </p>
-
-                        <p class="fw-semibold">CÓDIGO: 013</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card dmaria-card buy-product">
-                <img src="../images/alugar/pegue_e_monte/kit/minnie_kit.png" alt="Pacote Colher Descartável 50 unidades"
-                    class="card-img">
-                <div class="card-body d-flex flex-column justify-content-between">
-                    <p class="card-text">
-                        Mini Kit Pegue e Monte | Bobbie Goods
-                    </p>
-                    <div class="d-flex justify-content-between">
-                        <p class="fw-bold"> R$ 50,00 </p>
-
-                        <p class="fw-semibold">CÓDIGO: 014</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card dmaria-card buy-product">
-                <img src="../images/alugar/pegue_e_monte/kit/moana_2_kit.png"
-                    alt="Pacote Colher Descartável 50 unidades" class="card-img">
-                <div class="card-body d-flex flex-column justify-content-between">
-                    <p class="card-text">
-                        Mini Kit Pegue e Monte | Bobbie Goods
-                    </p>
-                    <div class="d-flex justify-content-between">
-                        <p class="fw-bold"> R$ 50,00 </p>
-
-                        <p class="fw-semibold">CÓDIGO: 015</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card dmaria-card buy-product">
-                <img src="../images/alugar/pegue_e_monte/kit/moana_kit.png" alt="Pacote Colher Descartável 50 unidades"
-                    class="card-img">
-                <div class="card-body d-flex flex-column justify-content-between">
-                    <p class="card-text">
-                        Mini Kit Pegue e Monte | Bobbie Goods
-                    </p>
-                    <div class="d-flex justify-content-between">
-                        <p class="fw-bold"> R$ 50,00 </p>
-
-                        <p class="fw-semibold">CÓDIGO: 016</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card dmaria-card buy-product">
-                <img src="../images/alugar/pegue_e_monte/kit/moranguinho_kit.png"
-                    alt="Pacote Colher Descartável 50 unidades" class="card-img">
-                <div class="card-body d-flex flex-column justify-content-between">
-                    <p class="card-text">
-                        Mini Kit Pegue e Monte | Bobbie Goods
-                    </p>
-                    <div class="d-flex justify-content-between">
-                        <p class="fw-bold"> R$ 50,00 </p>
-
-                        <p class="fw-semibold">CÓDIGO: 017</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card dmaria-card buy-product">
-                <img src="../images/alugar/pegue_e_monte/kit/poderoso_chefinho_kit.png"
-                    alt="Pacote Colher Descartável 50 unidades" class="card-img">
-                <div class="card-body d-flex flex-column justify-content-between">
-                    <p class="card-text">
-                        Mini Kit Pegue e Monte | Bobbie Goods
-                    </p>
-                    <div class="d-flex justify-content-between">
-                        <p class="fw-bold"> R$ 50,00 </p>
-
-                        <p class="fw-semibold">CÓDIGO: 018</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card dmaria-card buy-product">
-                <img src="../images/alugar/pegue_e_monte/kit/sereia_kit.png" alt="Pacote Colher Descartável 50 unidades"
-                    class="card-img">
-                <div class="card-body d-flex flex-column justify-content-between">
-                    <p class="card-text">
-                        Mini Kit Pegue e Monte | Bobbie Goods
-                    </p>
-                    <div class="d-flex justify-content-between">
-                        <p class="fw-bold"> R$ 50,00 </p>
-
-                        <p class="fw-semibold">CÓDIGO: 019</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card dmaria-card buy-product">
-                <img src="../images/alugar/pegue_e_monte/kit/stitch_2_kit.png"
-                    alt="Pacote Colher Descartável 50 unidades" class="card-img">
-                <div class="card-body d-flex flex-column justify-content-between">
-                    <p class="card-text">
-                        Mini Kit Pegue e Monte | Bobbie Goods
-                    </p>
-                    <div class="d-flex justify-content-between">
-                        <p class="fw-bold"> R$ 50,00 </p>
-
-                        <p class="fw-semibold">CÓDIGO: 020</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card dmaria-card buy-product">
-                <img src="../images/alugar/pegue_e_monte/kit/stitch_angel_kit.png"
-                    alt="Pacote Colher Descartável 50 unidades" class="card-img">
-                <div class="card-body d-flex flex-column justify-content-between">
-                    <p class="card-text">
-                        Mini Kit Pegue e Monte | Bobbie Goods
-                    </p>
-                    <div class="d-flex justify-content-between">
-                        <p class="fw-bold"> R$ 50,00 </p>
-
-                        <p class="fw-semibold">CÓDIGO: 021</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card dmaria-card buy-product">
-                <img src="../images/alugar/pegue_e_monte/kit/stitch_kit.png" alt="Pacote Colher Descartável 50 unidades"
-                    class="card-img">
-                <div class="card-body d-flex flex-column justify-content-between">
-                    <p class="card-text">
-                        Mini Kit Pegue e Monte | Bobbie Goods
-                    </p>
-                    <div class="d-flex justify-content-between">
-                        <p class="fw-bold"> R$ 50,00 </p>
-
-                        <p class="fw-semibold">CÓDIGO: 022</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card dmaria-card buy-product">
-                <img src="../images/alugar/pegue_e_monte/kit/turma_da_monica_kit.png"
-                    alt="Pacote Colher Descartável 50 unidades" class="card-img">
-                <div class="card-body d-flex flex-column justify-content-between">
-                    <p class="card-text">
-                        Mini Kit Pegue e Monte | Bobbie Goods
-                    </p>
-                    <div class="d-flex justify-content-between">
-                        <p class="fw-bold"> R$ 50,00 </p>
-
-                        <p class="fw-semibold">CÓDIGO: 023</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card dmaria-card buy-product">
-                <img src="../images/alugar/pegue_e_monte/kit/unicornio_kit.png"
-                    alt="Pacote Colher Descartável 50 unidades" class="card-img">
-                <div class="card-body d-flex flex-column justify-content-between">
-                    <p class="card-text">
-                        Mini Kit Pegue e Monte | Bobbie Goods
-                    </p>
-                    <div class="d-flex justify-content-between">
-                        <p class="fw-bold"> R$ 50,00 </p>
-
-                        <p class="fw-semibold">CÓDIGO: 024</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card dmaria-card buy-product">
-                <img src="../images/alugar/pegue_e_monte/kit/ursos_kit.png" alt="Pacote Colher Descartável 50 unidades"
-                    class="card-img">
-                <div class="card-body d-flex flex-column justify-content-between">
-                    <p class="card-text">
-                        Mini Kit Pegue e Monte | Bobbie Goods
-                    </p>
-                    <div class="d-flex justify-content-between">
-                        <p class="fw-bold"> R$ 50,00 </p>
-
-                        <p class="fw-semibold">CÓDIGO: 025</p>
-                    </div>
+                    <button class="btn bg-primary w-50 align-self-center"
+                        data-img="/images/alugar/pegue_e_monte/kit/animais_marinhos_kit.png"
+                        data-name="Kit Pegue e Monte | Fundo do Mar" data-price="50.00" data-cod="CÓDIGO: 001"
+                        onclick="addShoppingCar(this)">
+                        Adicionar</button>
                 </div>
             </div>
 
@@ -500,491 +185,24 @@
 
                         <p class="fw-semibold">CÓDIGO: 026</p>
                     </div>
+                    <button class="btn bg-primary w-50 align-self-center"
+                        data-img="/images/alugar/pegue_e_monte/mini_kit/abc_mini_kit.png"
+                        data-name="Mini Kit | ABC" data-price="25.00" data-cod="CÓDIGO: 026"
+                        onclick="addShoppingCar(this)">
+                        Adicionar</button>
                 </div>
             </div>
-
-            <div class="card dmaria-card buy-product">
-                <img src="../images/alugar/pegue_e_monte/mini_kit/aniversario_maderia_mini_kit.png"
-                    alt="Pacote Colher Descartável 50 unidades" class="card-img">
-                <div class="card-body d-flex flex-column justify-content-between">
-                    <p class="card-text">
-                        Mini Kit Pegue e Monte | Bobbie Goods
-                    </p>
-                    <div class="d-flex justify-content-between">
-                        <p class="fw-bold"> R$ 50,00 </p>
-
-                        <p class="fw-semibold">CÓDIGO: 027</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card dmaria-card buy-product">
-                <img src="../images/alugar/pegue_e_monte/mini_kit/anjo_mini_kit.png"
-                    alt="Pacote Colher Descartável 50 unidades" class="card-img">
-                <div class="card-body d-flex flex-column justify-content-between">
-                    <p class="card-text">
-                        Mini Kit Pegue e Monte | Bobbie Goods
-                    </p>
-                    <div class="d-flex justify-content-between">
-                        <p class="fw-bold"> R$ 50,00 </p>
-
-                        <p class="fw-semibold">CÓDIGO: 028</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card dmaria-card buy-product">
-                <img src="../images/alugar/pegue_e_monte/mini_kit/autismo_mini_kit.png"
-                    alt="Pacote Colher Descartável 50 unidades" class="card-img">
-                <div class="card-body d-flex flex-column justify-content-between">
-                    <p class="card-text">
-                        Mini Kit Pegue e Monte | Bobbie Goods
-                    </p>
-                    <div class="d-flex justify-content-between">
-                        <p class="fw-bold"> R$ 50,00 </p>
-
-                        <p class="fw-semibold">CÓDIGO: 029</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card dmaria-card buy-product">
-                <img src="../images/alugar/pegue_e_monte/mini_kit/barbie_mini_kit.png"
-                    alt="Pacote Colher Descartável 50 unidades" class="card-img">
-                <div class="card-body d-flex flex-column justify-content-between">
-                    <p class="card-text">
-                        Mini Kit Pegue e Monte | Bobbie Goods
-                    </p>
-                    <div class="d-flex justify-content-between">
-                        <p class="fw-bold"> R$ 50,00 </p>
-
-                        <p class="fw-semibold">CÓDIGO: 030</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card dmaria-card buy-product">
-                <img src="../images/alugar/pegue_e_monte/mini_kit/bobbie_goods_mini_kit.png"
-                    alt="Pacote Colher Descartável 50 unidades" class="card-img">
-                <div class="card-body d-flex flex-column justify-content-between">
-                    <p class="card-text">
-                        Mini Kit Pegue e Monte | Bobbie Goods
-                    </p>
-                    <div class="d-flex justify-content-between">
-                        <p class="fw-bold"> R$ 50,00 </p>
-
-                        <p class="fw-semibold">CÓDIGO: 031</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card dmaria-card buy-product">
-                <img src="../images/alugar/pegue_e_monte/mini_kit/boteco_mini_kit.png"
-                    alt="Pacote Colher Descartável 50 unidades" class="card-img">
-                <div class="card-body d-flex flex-column justify-content-between">
-                    <p class="card-text">
-                        Mini Kit Pegue e Monte | Bobbie Goods
-                    </p>
-                    <div class="d-flex justify-content-between">
-                        <p class="fw-bold"> R$ 50,00 </p>
-
-                        <p class="fw-semibold">CÓDIGO: 032</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card dmaria-card buy-product">
-                <img src="../images/alugar/pegue_e_monte/mini_kit/cavalos_min_kit.png"
-                    alt="Pacote Colher Descartável 50 unidades" class="card-img">
-                <div class="card-body d-flex flex-column justify-content-between">
-                    <p class="card-text">
-                        Mini Kit Pegue e Monte | Bobbie Goods
-                    </p>
-                    <div class="d-flex justify-content-between">
-                        <p class="fw-bold"> R$ 50,00 </p>
-
-                        <p class="fw-semibold">CÓDIGO: 033</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card dmaria-card buy-product">
-                <img src="../images/alugar/pegue_e_monte/mini_kit/cereja_mini_kit.png"
-                    alt="Pacote Colher Descartável 50 unidades" class="card-img">
-                <div class="card-body d-flex flex-column justify-content-between">
-                    <p class="card-text">
-                        Mini Kit Pegue e Monte | Bobbie Goods
-                    </p>
-                    <div class="d-flex justify-content-between">
-                        <p class="fw-bold"> R$ 50,00 </p>
-
-                        <p class="fw-semibold">CÓDIGO: 034</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card dmaria-card buy-product">
-                <img src="../images/alugar/pegue_e_monte/mini_kit/churrasco_mini_kit.png"
-                    alt="Pacote Colher Descartável 50 unidades" class="card-img">
-                <div class="card-body d-flex flex-column justify-content-between">
-                    <p class="card-text">
-                        Mini Kit Pegue e Monte | Bobbie Goods
-                    </p>
-                    <div class="d-flex justify-content-between">
-                        <p class="fw-bold"> R$ 50,00 </p>
-
-                        <p class="fw-semibold">CÓDIGO: 035</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card dmaria-card buy-product">
-                <img src="../images/alugar/pegue_e_monte/mini_kit/futebol_2_mini_kit.png"
-                    alt="Pacote Colher Descartável 50 unidades" class="card-img">
-                <div class="card-body d-flex flex-column justify-content-between">
-                    <p class="card-text">
-                        Mini Kit Pegue e Monte | Bobbie Goods
-                    </p>
-                    <div class="d-flex justify-content-between">
-                        <p class="fw-bold"> R$ 50,00 </p>
-
-                        <p class="fw-semibold">CÓDIGO: 036</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card dmaria-card buy-product">
-                <img src="../images/alugar/pegue_e_monte/mini_kit/futebol_mini_kit.png"
-                    alt="Pacote Colher Descartável 50 unidades" class="card-img">
-                <div class="card-body d-flex flex-column justify-content-between">
-                    <p class="card-text">
-                        Mini Kit Pegue e Monte | Bobbie Goods
-                    </p>
-                    <div class="d-flex justify-content-between">
-                        <p class="fw-bold"> R$ 50,00 </p>
-
-                        <p class="fw-semibold">CÓDIGO: 037</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card dmaria-card buy-product">
-                <img src="../images/alugar/pegue_e_monte/mini_kit/homem_aranha_mini_kit.png"
-                    alt="Pacote Colher Descartável 50 unidades" class="card-img">
-                <div class="card-body d-flex flex-column justify-content-between">
-                    <p class="card-text">
-                        Mini Kit Pegue e Monte | Bobbie Goods
-                    </p>
-                    <div class="d-flex justify-content-between">
-                        <p class="fw-bold"> R$ 50,00 </p>
-
-                        <p class="fw-semibold">CÓDIGO: 038</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card dmaria-card buy-product">
-                <img src="../images/alugar/pegue_e_monte/mini_kit/ladra_de_sono_mini_kit.png"
-                    alt="Pacote Colher Descartável 50 unidades" class="card-img">
-                <div class="card-body d-flex flex-column justify-content-between">
-                    <p class="card-text">
-                        Mini Kit Pegue e Monte | Bobbie Goods
-                    </p>
-                    <div class="d-flex justify-content-between">
-                        <p class="fw-bold"> R$ 50,00 </p>
-
-                        <p class="fw-semibold">CÓDIGO: 039</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card dmaria-card buy-product">
-                <img src="../images/alugar/pegue_e_monte/mini_kit/ladrao_de_sono_mini_kit.png"
-                    alt="Pacote Colher Descartável 50 unidades" class="card-img">
-                <div class="card-body d-flex flex-column justify-content-between">
-                    <p class="card-text">
-                        Mini Kit Pegue e Monte | Bobbie Goods
-                    </p>
-                    <div class="d-flex justify-content-between">
-                        <p class="fw-bold"> R$ 50,00 </p>
-
-                        <p class="fw-semibold">CÓDIGO: 040</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card dmaria-card buy-product">
-                <img src="../images/alugar/pegue_e_monte/mini_kit/menina_ruiva_mini_kit.png"
-                    alt="Pacote Colher Descartável 50 unidades" class="card-img">
-                <div class="card-body d-flex flex-column justify-content-between">
-                    <p class="card-text">
-                        Mini Kit Pegue e Monte | Bobbie Goods
-                    </p>
-                    <div class="d-flex justify-content-between">
-                        <p class="fw-bold"> R$ 50,00 </p>
-
-                        <p class="fw-semibold">CÓDIGO: 041</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card dmaria-card buy-product">
-                <img src="../images/alugar/pegue_e_monte/mini_kit/mesversario_11_mini_kit.png"
-                    alt="Pacote Colher Descartável 50 unidades" class="card-img">
-                <div class="card-body d-flex flex-column justify-content-between">
-                    <p class="card-text">
-                        Mini Kit Pegue e Monte | Bobbie Goods
-                    </p>
-                    <div class="d-flex justify-content-between">
-                        <p class="fw-bold"> R$ 50,00 </p>
-
-                        <p class="fw-semibold">CÓDIGO: 042</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card dmaria-card buy-product">
-                <img src="../images/alugar/pegue_e_monte/mini_kit/minhoca_roxa_mini_kit.png"
-                    alt="Pacote Colher Descartável 50 unidades" class="card-img">
-                <div class="card-body d-flex flex-column justify-content-between">
-                    <p class="card-text">
-                        Mini Kit Pegue e Monte | Bobbie Goods
-                    </p>
-                    <div class="d-flex justify-content-between">
-                        <p class="fw-bold"> R$ 50,00 </p>
-
-                        <p class="fw-semibold">CÓDIGO: 043</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card dmaria-card buy-product">
-                <img src="../images/alugar/pegue_e_monte/mini_kit/minnie_mini_kit.png"
-                    alt="Pacote Colher Descartável 50 unidades" class="card-img">
-                <div class="card-body d-flex flex-column justify-content-between">
-                    <p class="card-text">
-                        Mini Kit Pegue e Monte | Bobbie Goods
-                    </p>
-                    <div class="d-flex justify-content-between">
-                        <p class="fw-bold"> R$ 50,00 </p>
-
-                        <p class="fw-semibold">CÓDIGO: 044</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card dmaria-card buy-product">
-                <img src="../images/alugar/pegue_e_monte/mini_kit/moranguinho_mini_kit.png"
-                    alt="Pacote Colher Descartável 50 unidades" class="card-img">
-                <div class="card-body d-flex flex-column justify-content-between">
-                    <p class="card-text">
-                        Mini Kit Pegue e Monte | Bobbie Goods
-                    </p>
-                    <div class="d-flex justify-content-between">
-                        <p class="fw-bold"> R$ 50,00 </p>
-
-                        <p class="fw-semibold">CÓDIGO: 045</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card dmaria-card buy-product">
-                <img src="../images/alugar/pegue_e_monte/mini_kit/peppa_pig_mini_kit.png"
-                    alt="Pacote Colher Descartável 50 unidades" class="card-img">
-                <div class="card-body d-flex flex-column justify-content-between">
-                    <p class="card-text">
-                        Mini Kit Pegue e Monte | Bobbie Goods
-                    </p>
-                    <div class="d-flex justify-content-between">
-                        <p class="fw-bold"> R$ 50,00 </p>
-
-                        <p class="fw-semibold">CÓDIGO: 046</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card dmaria-card buy-product">
-                <img src="../images/alugar/pegue_e_monte/mini_kit/pequeno_principe_mini_kit.png"
-                    alt="Pacote Colher Descartável 50 unidades" class="card-img">
-                <div class="card-body d-flex flex-column justify-content-between">
-                    <p class="card-text">
-                        Mini Kit Pegue e Monte | Bobbie Goods
-                    </p>
-                    <div class="d-flex justify-content-between">
-                        <p class="fw-bold"> R$ 50,00 </p>
-
-                        <p class="fw-semibold">CÓDIGO: 047</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card dmaria-card buy-product">
-                <img src="../images/alugar/pegue_e_monte/mini_kit/pj_masks_2_mini_kit.png"
-                    alt="Pacote Colher Descartável 50 unidades" class="card-img">
-                <div class="card-body d-flex flex-column justify-content-between">
-                    <p class="card-text">
-                        Mini Kit Pegue e Monte | Bobbie Goods
-                    </p>
-                    <div class="d-flex justify-content-between">
-                        <p class="fw-bold"> R$ 50,00 </p>
-
-                        <p class="fw-semibold">CÓDIGO: 048</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card dmaria-card buy-product">
-                <img src="../images/alugar/pegue_e_monte/mini_kit/pj_masks_mini_kit.png"
-                    alt="Pacote Colher Descartável 50 unidades" class="card-img">
-                <div class="card-body d-flex flex-column justify-content-between">
-                    <p class="card-text">
-                        Mini Kit Pegue e Monte | Bobbie Goods
-                    </p>
-                    <div class="d-flex justify-content-between">
-                        <p class="fw-bold"> R$ 50,00 </p>
-
-                        <p class="fw-semibold">CÓDIGO: 049</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card dmaria-card buy-product">
-                <img src="../images/alugar/pegue_e_monte/mini_kit/princesa_mini_kit.png"
-                    alt="Pacote Colher Descartável 50 unidades" class="card-img">
-                <div class="card-body d-flex flex-column justify-content-between">
-                    <p class="card-text">
-                        Mini Kit Pegue e Monte | Bobbie Goods
-                    </p>
-                    <div class="d-flex justify-content-between">
-                        <p class="fw-bold"> R$ 50,00 </p>
-
-                        <p class="fw-semibold">CÓDIGO: 050</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card dmaria-card buy-product">
-                <img src="../images/alugar/pegue_e_monte/mini_kit/safari_mini_kit.png"
-                    alt="Pacote Colher Descartável 50 unidades" class="card-img">
-                <div class="card-body d-flex flex-column justify-content-between">
-                    <p class="card-text">
-                        Mini Kit Pegue e Monte | Bobbie Goods
-                    </p>
-                    <div class="d-flex justify-content-between">
-                        <p class="fw-bold"> R$ 50,00 </p>
-
-                        <p class="fw-semibold">CÓDIGO: 051</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card dmaria-card buy-product">
-                <img src="../images/alugar/pegue_e_monte/mini_kit/sereia_mini_kit.png"
-                    alt="Pacote Colher Descartável 50 unidades" class="card-img">
-                <div class="card-body d-flex flex-column justify-content-between">
-                    <p class="card-text">
-                        Mini Kit Pegue e Monte | Bobbie Goods
-                    </p>
-                    <div class="d-flex justify-content-between">
-                        <p class="fw-bold"> R$ 50,00 </p>
-
-                        <p class="fw-semibold">CÓDIGO: 052</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card dmaria-card buy-product">
-                <img src="../images/alugar/pegue_e_monte/mini_kit/snoopy_mini_kit.png"
-                    alt="Pacote Colher Descartável 50 unidades" class="card-img">
-                <div class="card-body d-flex flex-column justify-content-between">
-                    <p class="card-text">
-                        Mini Kit Pegue e Monte | Bobbie Goods
-                    </p>
-                    <div class="d-flex justify-content-between">
-                        <p class="fw-bold"> R$ 50,00 </p>
-
-                        <p class="fw-semibold">CÓDIGO: 053</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card dmaria-card buy-product">
-                <img src="../images/alugar/pegue_e_monte/mini_kit/sol_2_mini_kit.png"
-                    alt="Pacote Colher Descartável 50 unidades" class="card-img">
-                <div class="card-body d-flex flex-column justify-content-between">
-                    <p class="card-text">
-                        Mini Kit Pegue e Monte | Bobbie Goods
-                    </p>
-                    <div class="d-flex justify-content-between">
-                        <p class="fw-bold"> R$ 50,00 </p>
-
-                        <p class="fw-semibold">CÓDIGO: 054</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card dmaria-card buy-product">
-                <img src="../images/alugar/pegue_e_monte/mini_kit/sol_mini_kit.png"
-                    alt="Pacote Colher Descartável 50 unidades" class="card-img">
-                <div class="card-body d-flex flex-column justify-content-between">
-                    <p class="card-text">
-                        Mini Kit Pegue e Monte | Bobbie Goods
-                    </p>
-                    <div class="d-flex justify-content-between">
-                        <p class="fw-bold"> R$ 50,00 </p>
-
-                        <p class="fw-semibold">CÓDIGO: 055</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card dmaria-card buy-product">
-                <img src="../images/alugar/pegue_e_monte/mini_kit/star_wars_mini_kit.png"
-                    alt="Pacote Colher Descartável 50 unidades" class="card-img">
-                <div class="card-body d-flex flex-column justify-content-between">
-                    <p class="card-text">
-                        Mini Kit Pegue e Monte | Bobbie Goods
-                    </p>
-                    <div class="d-flex justify-content-between">
-                        <p class="fw-bold"> R$ 50,00 </p>
-
-                        <p class="fw-semibold">CÓDIGO: 056</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card dmaria-card buy-product">
-                <img src="../images/alugar/pegue_e_monte/mini_kit/tardezinha_mini_kit.png"
-                    alt="Pacote Colher Descartável 50 unidades" class="card-img">
-                <div class="card-body d-flex flex-column justify-content-between">
-                    <p class="card-text">
-                        Mini Kit Pegue e Monte | Bobbie Goods
-                    </p>
-                    <div class="d-flex justify-content-between">
-                        <p class="fw-bold"> R$ 50,00 </p>
-
-                        <p class="fw-semibold">CÓDIGO: 057</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card dmaria-card buy-product">
-                <img src="../images/alugar/pegue_e_monte/mini_kit/viva_a_vida_e_uma_festa_mini_kit.png"
-                    alt="Pacote Colher Descartável 50 unidades" class="card-img">
-                <div class="card-body d-flex flex-column justify-content-between">
-                    <p class="card-text">
-                        Mini Kit Pegue e Monte | Bobbie Goods
-                    </p>
-                    <div class="d-flex justify-content-between">
-                        <p class="fw-bold"> R$ 50,00 </p>
-
-                        <p class="fw-semibold">CÓDIGO: 058</p>
-                    </div>
-                </div>
-            </div>
-
 
         </section>
+
+        <!-- MESAS -->
+        <section class="produts d-flex" id="mesa"></section>
+
+        <!-- PAINEIS -->
+        <section class="produts d-flex" id="painel"></section>
+
+        <!-- TAPETES -->
+        <section class="produts d-flex" id="tapete"></section>
 
         <!-- BOLO FAKE -->
         <section class="products d-flex hidden" id="boloFake">
@@ -994,46 +212,24 @@
                     class="card-img">
                 <div class="card-body d-flex flex-column justify-content-between">
                     <p class="card-text">
-                        Bolo Fake | Cinderela 
+                        Bolo Fake | Cinderela
                     </p>
                     <div class="d-flex justify-content-between">
                         <p class="fw-bold"> R$ 50,00 </p>
 
                         <p class="fw-semibold">CÓDIGO: 059</p>
                     </div>
+                    <button class="btn bg-primary w-50 align-self-center"
+                        data-img="/images/alugar/bolo_fake/bolo_cinderela.png"
+                        data-name="Bolo Cinderela" data-price="150.30" data-cod="CÓDIGO: 059"
+                        onclick="addShoppingCar(this)">
+                        Adicionar</button>
                 </div>
             </div>
 
-            <div class="card dmaria-card buy-product">
-                <img src="../images/alugar/bolo_fake/bolo_braco_bascio.png" alt="Pacote Colher Descartável 50 unidades"
-                    class="card-img">
-                <div class="card-body d-flex flex-column justify-content-between">
-                    <p class="card-text">
-                        Bolo Fake Branco com Laços Vermelhos
-                    </p>
-                    <div class="d-flex justify-content-between">
-                        <p class="fw-bold"> R$ 50,00 </p>
-
-                        <p class="fw-semibold">CÓDIGO: 060</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card dmaria-card buy-product">
-                <img src="../images/alugar/bolo_fake/bolo_safari.png" alt="Pacote Colher Descartável 50 unidades"
-                    class="card-img">
-                <div class="card-body d-flex flex-column justify-content-between">
-                    <p class="card-text">
-                        Bolo Fake | Safari
-                    </p>
-                    <div class="d-flex justify-content-between">
-                        <p class="fw-bold"> R$ 50,00 </p>
-
-                        <p class="fw-semibold">CÓDIGO: 061</p>
-                    </div>
-                </div>
-            </div>
         </section>
+
+
 
     </main>
 
