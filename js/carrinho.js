@@ -1,4 +1,6 @@
-// Função principal que roda ao carregar a página
+
+
+
 document.addEventListener('DOMContentLoaded', () => {
     renderizarCarrinho();
 });
@@ -7,13 +9,13 @@ document.addEventListener('DOMContentLoaded', () => {
 function renderizarCarrinho() {
     // 1. Pega os dados atualizados
     let carrinho = JSON.parse(localStorage.getItem('carrinhoDMaria')) || [];
-    
+
     const containerCarrinho = document.querySelector('#lista-do-carrinho');
     const containerTotal = document.querySelector('#resumo-total'); // Criei um ID específico para o resumo
-    
+
     // Limpa a tela antes de desenhar (evita duplicar itens ao atualizar)
     containerCarrinho.innerHTML = '';
-    if(containerTotal) containerTotal.innerHTML = '';
+    if (containerTotal) containerTotal.innerHTML = '';
 
     // Se vazio, mostra aviso
     if (carrinho.length === 0) {
@@ -29,7 +31,7 @@ function renderizarCarrinho() {
     // 2. Loop para desenhar cada item
     carrinho.forEach(item => {
         // Garante que são números para o cálculo
-        const precoPorItem = parseFloat(item.price); 
+        const precoPorItem = parseFloat(item.price);
         const quantidade = parseInt(item.quant);
         const subtotal = precoPorItem * quantidade;
 
@@ -70,15 +72,12 @@ function renderizarCarrinho() {
         `;
     });
 
-    // 3. Exibe o Resumo Final (Total)
     const totalFormatado = valorTotalCarrinho.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
-    
-    // Procura onde desenhar o total. Se não existir a div #resumo-total, desenha no carrinhoMain
+
     const carrinhoMain = document.querySelector('.carrinho-compras');
-    
-    // Remove resumo antigo se houver para não duplicar
+
     const resumoAntigo = document.querySelector('.carrinho-infos');
-    if(resumoAntigo) resumoAntigo.remove();
+    if (resumoAntigo) resumoAntigo.remove();
 
     carrinhoMain.innerHTML += `
         <section class="carrinho-infos border p-4 bg-white rounded shadow-sm mt-3">
@@ -90,8 +89,13 @@ function renderizarCarrinho() {
             <button class="btn btn-success w-100 mt-3 py-2 fw-bold" onclick="finalizarWhatsApp()">
                 <i class="fa-brands fa-whatsapp"></i> Finalizar Pedido
             </button>
+            <button class="btn btn-danger w-100 mt-4" onclick="limparCarrinho()"> 
+                Limpar Carrinho
+            </button>
         </section>
     `;
+
+    return totalFormatado
 }
 
 // --- FUNÇÕES DE AÇÃO (PRECISAM FICAR FORA DO DOMContentLoaded) ---
@@ -106,31 +110,31 @@ function alterarQuantidade(idProduto, mudanca) {
     if (index !== -1) {
         // 3. Verifica nomes das variáveis (para compatibilidade com seu código antigo)
         let qtdAtual = parseInt(carrinho[index].quant || carrinho[index].quantidade);
-        
+
         // 4. Aplica a mudança (+1 ou -1)
         qtdAtual += mudanca;
 
         // 5. Se for menor que 1, não faz nada (ou poderia remover)
         if (qtdAtual < 1) {
-            qtdAtual = 1; 
+            qtdAtual = 1;
         }
 
         // 6. Salva o novo valor
-        if(carrinho[index].quant) carrinho[index].quant = qtdAtual;
-        if(carrinho[index].quantidade) carrinho[index].quantidade = qtdAtual;
+        if (carrinho[index].quant) carrinho[index].quant = qtdAtual;
+        if (carrinho[index].quantidade) carrinho[index].quantidade = qtdAtual;
 
         localStorage.setItem('carrinhoDMaria', JSON.stringify(carrinho));
-        
+
         // 7. MÁGICA: Renderiza tudo de novo para atualizar os preços na tela
         renderizarCarrinho();
     }
 }
 
 function removerItem(idProduto) {
-    if(!confirm("Deseja remover este item do carrinho?")) return;
+    if (!confirm("Deseja remover este item do carrinho?")) return;
 
     let carrinho = JSON.parse(localStorage.getItem('carrinhoDMaria')) || [];
-    
+
     // Filtra criando uma nova lista SEM o item que queremos apagar
     const novoCarrinho = carrinho.filter(item => item.cod != idProduto);
 
@@ -139,6 +143,42 @@ function removerItem(idProduto) {
 }
 
 function limparCarrinho() {
-    localStorage.removeItem('carrinhoDMaria');
+    localStorage.clear();
     renderizarCarrinho();
+}
+
+function finalizarWhatsApp() {
+    let carrinhoFinalizado = JSON.parse(localStorage.getItem('carrinhoDMaria'))
+
+    let mensagem = encodeURIComponent(`*PEDIDO DMARIA DECORAÇÕES*
+    
+*Lista*:
+`)
+
+    let numeroLista = 0
+    let valorTotal = 0
+
+    carrinhoFinalizado.forEach(item => {
+        let nome = item.name
+        const quantidade = parseInt(item.quant)
+        const valor = parseFloat(item.price)
+        const codigo = item.cod
+        const subtotal = valor * quantidade
+        const subtotalFormatado = subtotal.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+
+        numeroLista += 1
+        valorTotal += valor
+
+        mensagem += encodeURIComponent(`${numeroLista}. (${quantidade}x) ${nome} [${subtotalFormatado}]
+`)
+
+    })
+
+    mensagem += encodeURIComponent(`
+
+*Valor Total: ${renderizarCarrinho()}*`)
+
+    const linkWhatsapp = `https://wa.me/5551994808982?text=${mensagem}`
+    console.log(linkWhatsapp)
+    window.open(linkWhatsapp, '_blank')
 }
