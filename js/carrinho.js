@@ -143,6 +143,7 @@ function removerItem(idProduto) {
 }
 
 function limparCarrinho() {
+    if (!confirm("Deseja limpar o carrinho?")) return
     localStorage.clear();
     renderizarCarrinho();
 }
