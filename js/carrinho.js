@@ -39,12 +39,12 @@ function renderizarCarrinho() {
 
         containerCarrinho.innerHTML += `
             <div class="item-carrinho card mb-3 p-3 shadow-sm">
-                <div class="d-flex align-items-center gap-3">
+                <div class="d-flex gap-3">
                     
                     <img src="${item.img}">
                     
                     <div class="flex-grow-1">
-                        <h5 class="mb-1">${item.name}</h5>
+                        <h5 class="mb-1 fs-6">${item.name}</h5>
                         <p class="text-muted mb-2">Unitário: R$ ${precoPorItem.toFixed(2).replace('.', ',')}</p>
                         
                         <div class="d-flex align-items-center gap-2">
@@ -64,8 +64,8 @@ function renderizarCarrinho() {
                         </div>
                     </div>
 
-                    <div class="text-end">
-                        <p class="fw-bold fs-5 text-success">R$ ${subtotal.toFixed(2).replace('.', ',')}</p>
+                    <div class="">
+                        <p class="fw-bold fs-5 text-center text-success">R$ ${subtotal.toFixed(2).replace('.', ',')}</p>
                     </div>
                 </div>
             </div>
@@ -81,7 +81,7 @@ function renderizarCarrinho() {
 
     carrinhoMain.innerHTML += `
         <section class="carrinho-infos border p-4 bg-white rounded shadow-sm mt-3">
-            <h3 class="mb-3">Resumo do Pedido</h3>
+            <h3 class="mb-3 text-center">Resumo do Pedido</h3>
             <div class="d-flex justify-content-between align-items-center border-top pt-3">
                 <span class="fs-5">Total a Pagar:</span>
                 <span class="fs-2 fw-bold text-success">${totalFormatado}</span>

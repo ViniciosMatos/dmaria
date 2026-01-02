@@ -1,9 +1,8 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-
 .light-background {
     background-color: #e0daca !important;
 }
@@ -46,15 +45,18 @@ ul {
     }
 }
 
-select, select::picker(select) {
-  appearance: base-select;
-  border: none;
+select,
+select::picker(select) {
+    appearance: base-select;
+    border: none;
 }
+
 select::picker-icon {
     display: block;
-    content:icon('');
+    content: icon('');
 }
-select{
+
+select {
     display: flex !important;
     flex-direction: row !important;
 }
@@ -63,14 +65,15 @@ option {
     background-color: #e0daca;
     display: flex;
 }
-option::checkmark{
+
+option::checkmark {
     display: none;
 }
 
 /* Agora você pode mudar o fundo no hover */
 option:hover {
-  background-color: transparent; 
-  color: #95783e;
+    background-color: transparent;
+    color: #95783e;
 }
 
 .padding-container {
@@ -115,18 +118,18 @@ option:hover {
     }
 }
 
-section.hidden{
-    display: none !important;
-}
-.hidden > *{
+section.hidden {
     display: none !important;
 }
 
-.carrinho-infos{
-    position: absolute;
+.hidden>* {
+    display: none !important;
+}
+
+.carrinho-infos {
     right: 0;
     margin: 1rem;
-    width: 22rem;
+    width: 30rem;
     border-left: 1px solid #95783e;
 }
 
@@ -136,23 +139,25 @@ section.hidden{
     width: 100%;
 }
 
-.carrinho-compras{
+.carrinho-compras {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    padding-left: 20%;
 }
 
-.item-carrinho{
-    display: flex;
+.item-carrinho {
+    display: block;
     width: 100%;
-    gap: 1rem;
 
-    & img{
+    & img {
         width: 4rem;
+        height: 6rem;
         border: 1px solid;
-        border-radius: 0.2rem
-    };  
-    & .item-valor{
+        border-radius: 0.2rem;
+        object-fit: cover;
+        display: block;
+    }
+
+    & .item-valor {
         display: flex;
         gap: 10rem;
     }
@@ -186,18 +191,44 @@ section.hidden{
 
 @media screen and (max-width: 767px) {
     .padding-container {
-        padding: 0 2rem;
+        padding: 0 1rem;
     }
+
+    .carrinho-compras {
+        display: block;
+        padding: 0 1rem;
+        padding-bottom: 2rem;
+    }
+
+    .carrinho-infos {
+        margin: 0;
+        width: 100%;
+        border-left: none;
+    }
+
+
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
     .padding-container {
         padding: 0 4rem;
     }
+
+    .carrinho-compras {
+        display: block;
+        padding: 0 4rem;
+        padding-bottom: 2rem;
+    }
+
+    .carrinho-infos{
+        margin: 0;
+        width: 100%;
+    }
+
 }
 
-.btn-check:checked + .btn {
-    background-color: #95783e !important; /* Sua cor medium-background */
+.btn-check:checked+.btn {
+    background-color: #95783e !important;
     border-color: #95783e !important;
-    color: #fff !important; /* Texto branco para contraste */
+    color: #fff !important;
 }
