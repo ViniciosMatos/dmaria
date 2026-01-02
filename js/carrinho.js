@@ -1,23 +1,21 @@
-
-
-
 document.addEventListener('DOMContentLoaded', () => {
     renderizarCarrinho();
 });
 
-// Função que desenha o carrinho na tela
+
+
 function renderizarCarrinho() {
-    // 1. Pega os dados atualizados
+    
     let carrinho = JSON.parse(localStorage.getItem('carrinhoDMaria')) || [];
 
     const containerCarrinho = document.querySelector('#lista-do-carrinho');
-    const containerTotal = document.querySelector('#resumo-total'); // Criei um ID específico para o resumo
+    const containerTotal = document.querySelector('#resumo-total');
 
-    // Limpa a tela antes de desenhar (evita duplicar itens ao atualizar)
+    
     containerCarrinho.innerHTML = '';
     if (containerTotal) containerTotal.innerHTML = '';
 
-    // Se vazio, mostra aviso
+    
     if (carrinho.length === 0) {
         containerCarrinho.innerHTML = `
             <div class="alert alert-warning text-center">
@@ -28,9 +26,9 @@ function renderizarCarrinho() {
 
     let valorTotalCarrinho = 0;
 
-    // 2. Loop para desenhar cada item
+    
     carrinho.forEach(item => {
-        // Garante que são números para o cálculo
+        
         const precoPorItem = parseFloat(item.price);
         const quantidade = parseInt(item.quant);
         const subtotal = precoPorItem * quantidade;
@@ -98,34 +96,27 @@ function renderizarCarrinho() {
     return totalFormatado
 }
 
-// --- FUNÇÕES DE AÇÃO (PRECISAM FICAR FORA DO DOMContentLoaded) ---
 
 function alterarQuantidade(idProduto, mudanca) {
-    // 1. Pega o carrinho
+    
     let carrinho = JSON.parse(localStorage.getItem('carrinhoDMaria')) || [];
 
-    // 2. Encontra o item pelo ID
     const index = carrinho.findIndex(item => item.cod == idProduto);
 
     if (index !== -1) {
-        // 3. Verifica nomes das variáveis (para compatibilidade com seu código antigo)
         let qtdAtual = parseInt(carrinho[index].quant || carrinho[index].quantidade);
 
-        // 4. Aplica a mudança (+1 ou -1)
         qtdAtual += mudanca;
 
-        // 5. Se for menor que 1, não faz nada (ou poderia remover)
         if (qtdAtual < 1) {
             qtdAtual = 1;
         }
 
-        // 6. Salva o novo valor
         if (carrinho[index].quant) carrinho[index].quant = qtdAtual;
         if (carrinho[index].quantidade) carrinho[index].quantidade = qtdAtual;
 
         localStorage.setItem('carrinhoDMaria', JSON.stringify(carrinho));
 
-        // 7. MÁGICA: Renderiza tudo de novo para atualizar os preços na tela
         renderizarCarrinho();
     }
 }
@@ -135,7 +126,6 @@ function removerItem(idProduto) {
 
     let carrinho = JSON.parse(localStorage.getItem('carrinhoDMaria')) || [];
 
-    // Filtra criando uma nova lista SEM o item que queremos apagar
     const novoCarrinho = carrinho.filter(item => item.cod != idProduto);
 
     localStorage.setItem('carrinhoDMaria', JSON.stringify(novoCarrinho));

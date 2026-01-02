@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>D'Maria Decorações</title>
-    <base href="/dmaria/">
     
     <link rel="shortcut icon" href="/images/dmarialogo-removebg.png" type="image/x-icon">
     <link rel="stylesheet" href="/css/style.css">
@@ -17,63 +16,7 @@
 </head>
 
 <body>
-    <header class="d-flex justify-content-between padding-container light-background shadow-sm">
-        <!-- RECORTAR AS LATERAIS DA LOGO PRA HEADER FICAR CORRETA -->
-        <img src="/images/dmarialogo.png" alt="Logo D'Maria Decorações" class="">
-        <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-
-        <div class="right-side d-flex align-items-center">
-            <a href="/pages/pages/carrinhoCompras.html">
-                <i class="fa-solid fa-cart-shopping medium-color fs-5"></i>
-            </a>
-
-        <nav class="navbar navbar-expand-lg">
-            <div class="container-fluid">
-
-                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="offcanvas offcanvas-end text-bg light-background" tabindex="-1" id="offcanvasNavbar"
-                    aria-labelledby="offcanvasNavbarLabel">
-                    <div class="offcanvas-header ">
-                        <h5 class="offcanvas-title medium-color" id="offcanvasNavbarLabel">D'Maria Decorações</h5>
-                        <button type="button" class="btn-close btn-close d-lg-none" data-bs-dismiss="offcanvas"
-                            aria-label="Close"></button>
-                    </div>
-
-                    <div class="offcanvas-body">
-
-                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                            <li class="nav-item ">
-                                <a class="nav-link medium-color" aria-current="page" href="/index.html">Início</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle medium-color" href="#" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    Serviços
-                                </a>
-                                <ul class="dropdown-menu dropdown-menu light-background">
-                                    <li><a class="dropdown-item medium-color" href="/pages/alugarProdutos.html?category=bolo">Bolo Fake</a></li>
-                                    <li><a class="dropdown-item medium-color" href="/pages/decoracao.html">Decorações</a></li>
-                                    <li><a class="dropdown-item medium-color" href="/pages/comprarProdutos.html">Para Comprar</a></li>
-                                    <li><a class="dropdown-item medium-color" href="/pages/alugarProdutos.html?category=monte">Pegue e Monte</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link medium-color" href="#">Sobre Nós</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link medium-color" href="#">Contatos</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </nav>
-        </div>
-    </header>
+    <header class="d-flex justify-content-between padding-container light-background shadow-sm" id="header"></header>
     <section class="padding-container text-center soft-background pt-3 pb-3">
         <p>Seja Bem-vindo à D'Maria Decorações!
             <br>
@@ -96,6 +39,8 @@
 
 
     <script src="/js/main.js"></script>
+
+    <script src="/js/templates.js"></script>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
