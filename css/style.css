@@ -1,0 +1,25 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.text-color-main{
+    color: #054b36;
+}
+.background-color-main{
+    background-color: #054b36;   
+}
+
+.text-color-secondary{
+    color: #cc9a37;
+}
+.background-color-secondary{
+    background-color: #cc9a37;   
+}
+
+.page-links{
+    & a:hover{
+        color: #cc9a37;
+    }
+}
