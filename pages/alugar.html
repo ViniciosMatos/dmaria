@@ -24,48 +24,177 @@
         </div>
     </header>
 
-    <main class="container d-flex flex-column gap-4">
+    <main class="container d-flex flex-column align-items-center gap-4">
         <section class="notice mt-5 text-center">
             <p class="fw-bold fs-3">Aqui está nosso catálogo!</p>
             <p class="fw-semibold fs-5">Escolha os kits já prontos para sua festa!</p>
         </section>
 
-        <section class="category-options d-flex">
+        <section class="category-options d-flex justify-content-around flex-wrap gap-2 px-3">
             <div class="option-button"></div>
-            <input type="radio" name="bolo-fake" id="bolo-fake" name="categoryFilter" class="btn-check"
+            <input type="radio" name="bolo-fake" id="bolo-fake-check" name="categoryFilter" class="btn-check"
                 value="bolo-fake">
-            <label for="bolo-fake" class="btn">Bolo Fake</label>
+            <label for="bolo-fake-check" class="btn">Bolo Fake</label>
 
-            <input type="radio" name="pegue-monte" id="pegue-monte" name="categoryFilter" class="btn-check"
+            <input type="radio" name="pegue-monte" id="pegue-monte-check" name="categoryFilter" class="btn-check"
                 value="pegue-monte" checked>
-            <label for="pegue-monte" class="btn">Kit Pegue e Monte</label>
+            <label for="pegue-monte-check" class="btn">Kit Pegue e Monte</label>
 
-            <input type="radio" name="mini-kits" id="mini-kits" name="categoryFilter" class="btn-check"
+            <input type="radio" name="mini-kits" id="mini-kits-check" name="categoryFilter" class="btn-check"
                 value="mini-kits">
-            <label for="mini-kits" class="btn">Mini Kits</label>
+            <label for="mini-kits-check" class="btn">Mini Kits</label>
 
-            <input type="radio" name="pegue-monte" id="pegue-monte" name="categoryFilter" class="btn-check"
-                value="pegue-monte">
-            <label for="pegue-monte" class="btn">Kit Pegue e Monte</label>
+            <input type="radio" name="mesas" id="mesas-check" name="categoryFilter" class="btn-check" value="mesas">
+            <label for="mesas-check" class="btn">Mesas</label>
 
-            <input type="radio" name="mesas" id="mesas" name="categoryFilter" class="btn-check" value="mesas">
-            <label for="mesas" class="btn">Mesas</label>
+            <input type="radio" name="tapetes" id="tapetes-check" name="categoryFilter" class="btn-check" value="tapetes">
+            <label for="tapetes-check" class="btn">Tapetes</label>
 
-            <input type="radio" name="tapetes" id="tapetes" name="categoryFilter" class="btn-check" value="tapetes">
-            <label for="tapetes" class="btn">Tapetes</label>
+            <input type="radio" name="vasos" id="vasos-check" name="categoryFilter" class="btn-check"
+                value="vasos">
+            <label for="vasos-check" class="btn">Vasos/Boleiras</label>
 
-            <input type="radio" name="adicionais" id="adicionais" name="categoryFilter" class="btn-check"
+            <input type="radio" name="adicionais" id="adicionais-check" name="categoryFilter" class="btn-check"
                 value="adicionais">
-            <label for="adicionais" class="btn">Adicionais</label>
+            <label for="adicionais-check" class="btn">Adicionais</label>
 
+        </section>
 
+        <section class="bolo-fake" id="boloFake">
 
+            <div class="card dmaria-card buy-product">
+                <img src="/images/logo/logo_dmaria.png" alt="NOME" class="card-img">
+                <div class="card-body d-flex flex-column justify-content-between">
+                    <p class="card-text">
+                        BOLO FAKE
+                    </p>
+                    <div class="d-flex justify-content-between">
+                        <p class="fw-bold"> R$ </p>
+                        <p class="fw-semibold">CÓDIGO: </p>
+                    </div>
+                    <button class="btn btn-primary w-50 align-self-center">
+                        Adicionar
+                    </button>
+                </div>
+            </div>
+        </section>
 
+        <section class="pegue-monte" id="pegueMonte">
 
+            <div class="card dmaria-card buy-product">
+                <img src="/images/logo/logo_dmaria.png" alt="NOME" class="card-img">
+                <div class="card-body d-flex flex-column justify-content-between">
+                    <p class="card-text">
+                        PEGUE E MONTE
+                    </p>
+                    <div class="d-flex justify-content-between">
+                        <p class="fw-bold"> R$ </p>
+                        <p class="fw-semibold">CÓDIGO: </p>
+                    </div>
+                    <button class="btn btn-primary w-50 align-self-center">
+                        Adicionar
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="mini-kits" id="miniKits">
+
+            <div class="card dmaria-card buy-product">
+                <img src="/images/logo/logo_dmaria.png" alt="NOME" class="card-img">
+                <div class="card-body d-flex flex-column justify-content-between">
+                    <p class="card-text">
+                        MINI KIT - TEMA
+                    </p>
+                    <div class="d-flex justify-content-between">
+                        <p class="fw-bold"> R$ </p>
+                        <p class="fw-semibold">CÓDIGO: </p>
+                    </div>
+                    <button class="btn btn-primary w-50 align-self-center">
+                        Adicionar
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="mesas" id="mesas">
+
+            <div class="card dmaria-card buy-product">
+                <img src="/images/logo/logo_dmaria.png" alt="NOME" class="card-img">
+                <div class="card-body d-flex flex-column justify-content-between">
+                    <p class="card-text">
+                        MESA
+                    </p>
+                    <div class="d-flex justify-content-between">
+                        <p class="fw-bold"> R$ </p>
+                        <p class="fw-semibold">CÓDIGO: </p>
+                    </div>
+                    <button class="btn btn-primary w-50 align-self-center">
+                        Adicionar
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="tapetes" id="tapetes">
+
+            <div class="card dmaria-card buy-product">
+                <img src="/images/logo/logo_dmaria.png" alt="NOME" class="card-img">
+                <div class="card-body d-flex flex-column justify-content-between">
+                    <p class="card-text">
+                        TAPETE
+                    </p>
+                    <div class="d-flex justify-content-between">
+                        <p class="fw-bold"> R$ </p>
+                        <p class="fw-semibold">CÓDIGO: </p>
+                    </div>
+                    <button class="btn btn-primary w-50 align-self-center">
+                        Adicionar
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="vasos" id="vasos">
+
+            <div class="card dmaria-card buy-product">
+                <img src="/images/logo/logo_dmaria.png" alt="NOME" class="card-img">
+                <div class="card-body d-flex flex-column justify-content-between">
+                    <p class="card-text">
+                        BOLEIRA E VASOS
+                    </p>
+                    <div class="d-flex justify-content-between">
+                        <p class="fw-bold"> R$ </p>
+                        <p class="fw-semibold">CÓDIGO: </p>
+                    </div>
+                    <button class="btn btn-primary w-50 align-self-center">
+                        Adicionar
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="adicionais" id="adicionais">
+
+            <div class="card dmaria-card buy-product">
+                <img src="/images/logo/logo_dmaria.png" alt="NOME" class="card-img">
+                <div class="card-body d-flex flex-column justify-content-between">
+                    <p class="card-text">
+                        ADICIONAIS
+                    </p>
+                    <div class="d-flex justify-content-between">
+                        <p class="fw-bold"> R$ </p>
+                        <p class="fw-semibold">CÓDIGO: </p>
+                    </div>
+                    <button class="btn btn-primary w-50 align-self-center">
+                        Adicionar
+                    </button>
+                </div>
+            </div>
         </section>
     </main>
 
-
+    <footer class="background-color-main text-center d-flex flex-wrap justify-content-around"></footer>
 
 
 
