@@ -32,3 +32,20 @@
 
 
 /* alugar.html */
+
+.btn-check:checked+.btn{ /* mudando a cor do botão*/
+    background-color: #054b36 !important;
+    color: #cc9a37 !important;
+}
+
+.btn-check:checked+.btn:hover{
+    color: white !important;
+}
+
+label:hover{
+    color: #cc9a37 !important;
+}
+
+.hidden{
+    display: none;
+}
