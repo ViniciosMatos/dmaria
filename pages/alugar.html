@@ -41,19 +41,21 @@
         <p class="fw-semibold fs-5">Escolha os kits já prontos para sua festa!</p>
     </section>
 
-    <search class="align-self-center">
-        <input type="text" name="search" id="search" placeholder="Procure pelo nome do produto" class="">
+    <search class="d-flex justify-content-center my-5">
+        <input type="text" name="search" id="search" placeholder="Procure pelo nome do produto" class="w-50">
     </search>
 
-    <main class="container d-flex justify-content-center gap-5 mb-5">
-        <aside class="bg-primary px-3">
+    <main class="d-flex justify-content-center gap-5 mb-5">
+        <aside>
             <search>
                 <h3>Filtro</h3>
                 <ul class="list-unstyled" id="filterList">
-                    <li><button type="button" class="btn chooseCategory" value="boloFake">Bolo
+                    <li>
+                        <!-- <a class="chooseCategory" value="boloFake">Bolo Fake</a> -->
+                        <button type="button" class="btn chooseCategory" value="boloFake">Bolo
                             Fake</button></li>
 
-                    <li><button type="button" class="btn chooseCategory" value="conjuntosGrandes">Conjuntos
+                    <li><button type="button" class="btn chooseCategory fw-bold" value="conjuntosGrandes" id="initialFilter">Conjuntos
                             Grandes</button></li>
 
 
@@ -72,14 +74,13 @@
                     <li><button type="button" class="btn chooseCategory" value="adicionais">Adicionais</button></li>
                 </ul>
 
-
             </search>
         </aside>
 
-        <div class="rent-cards d-flex">
-            <section class="bolo-fake hidden" id="boloFake">
+        <div class="rent-cards">
+            <section class="hidden rent-sections" id="boloFake">
 
-                <div class="card dmaria-card buy-product col-3">
+                <div class="card dmaria-card buy-product col-3 shadow">
                     <img src="/images/logo/logo_dmaria.png" alt="NOME" class="card-img">
                     <div class="card-body d-flex flex-column justify-content-between">
                         <p class="card-text">
@@ -95,7 +96,7 @@
                     </div>
                 </div>
 
-                <div class="card dmaria-card buy-product col-3">
+                <div class="card dmaria-card buy-product col-3 shadow">
                     <img src="/images/logo/logo_dmaria.png" alt="NOME" class="card-img">
                     <div class="card-body d-flex flex-column justify-content-between">
                         <p class="card-text">
@@ -111,7 +112,7 @@
                     </div>
                 </div>
 
-                <div class="card dmaria-card buy-product col-3">
+                <div class="card dmaria-card buy-product col-3 shadow">
                     <img src="/images/logo/logo_dmaria.png" alt="NOME" class="card-img">
                     <div class="card-body d-flex flex-column justify-content-between">
                         <p class="card-text">
@@ -128,8 +129,8 @@
                 </div>
             </section>
 
-            <section class="d-flex flex-wrap justify-content-around gap-4" id="conjuntosGrandes">
-                <div class="card dmaria-card buy-product col-3">
+            <section class="rent-sections" id="conjuntosGrandes">
+                <div class="card dmaria-card buy-product col-3 shadow">
                     <img src="/images/logo/logo_dmaria.png" alt="NOME" class="card-img">
                     <div class="card-body d-flex flex-column justify-content-between">
                         <p class="card-text">
@@ -178,7 +179,7 @@
                 </div>
             </section>
 
-            <section class="hidden" id="conjuntosPequenos">
+            <section class="hidden rent-sections" id="conjuntosPequenos">
 
                 <div class="card dmaria-card buy-product col-3">
                     <img src="/images/logo/logo_dmaria.png" alt="NOME" class="card-img">
@@ -229,7 +230,7 @@
                 </div>
             </section>
 
-            <section class="hidden" id="cortinas">
+            <section class="hidden rent-sections" id="cortinas">
 
                 <div class="card dmaria-card buy-product col-3">
                     <img src="/images/logo/logo_dmaria.png" alt="NOME" class="card-img">
@@ -280,7 +281,7 @@
                 </div>
             </section>
 
-            <section class="hidden" id="mesas">
+            <section class="hidden rent-sections" id="mesas">
 
                 <div class="card dmaria-card buy-product col-3">
                     <img src="/images/logo/logo_dmaria.png" alt="NOME" class="card-img">
@@ -329,7 +330,7 @@
                 </div>
             </section>
 
-            <section class="hidden" id="tapetes">
+            <section class="hidden rent-sections" id="tapetes">
 
                 <div class="card dmaria-card buy-product col-3">
                     <img src="/images/logo/logo_dmaria.png" alt="NOME" class="card-img">
@@ -378,7 +379,7 @@
                 </div>
             </section>
 
-            <section class="hidden" id="vasos">
+            <section class="hidden rent-sections" id="vasos">
 
                 <div class="card dmaria-card buy-product col-3">
                     <img src="/images/logo/logo_dmaria.png" alt="NOME" class="card-img">
@@ -427,7 +428,7 @@
                 </div>
             </section>
 
-            <section class="hidden" id="adicionais">
+            <section class="hidden rent-sections" id="adicionais">
 
                 <div class="card dmaria-card buy-product col-3">
                     <img src="/images/logo/logo_dmaria.png" alt="NOME" class="card-img">
@@ -490,5 +491,3 @@
 
     <script src="https://kit.fontawesome.com/b624667e59.js" crossorigin="anonymous"></script> <!-- font awesome -->
 </body>
-
-</html>

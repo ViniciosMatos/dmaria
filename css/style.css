@@ -53,7 +53,7 @@ footer {
 
 #contacts a:hover{
     /* crescer o botao um pouco + mini animação */
-    transform: scale(110%);
+    cursor: pointer;
 }
 
 .contacts-link{
@@ -70,22 +70,19 @@ footer {
 
 /* alugar.html */
 
-.btn-check:checked+.btn {
-    /* mudando a cor do botão*/
-    background-color: #054b36 !important;
-    color: #cc9a37 !important;
+input{
+padding: 0.5rem;
 }
 
-.btn-check:checked+.btn:hover {
-    color: white !important;
+aside{
+    border: 1px rgb(223, 223, 223) solid;
+    padding: 1rem;
+    width: 14rem;
 }
 
-label:hover {
-    color: #cc9a37 !important;
-}
 
 .hidden {
-    display: none;
+    display: none !important;
 }
 
 .card{
@@ -106,4 +103,10 @@ label:hover {
     height: 26rem !important;
     object-fit: cover;
     display: block;
+}
+
+.rent-sections {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
 }

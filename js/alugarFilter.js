@@ -1,60 +1,69 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const boloSection = document.querySelector('#boloFake')
-    const conjuntosGrandesSection = document.querySelector('#conjuntosGrandes')
-    const conjuntosPequenosSection = document.querySelector('#conjuntosPequenos')
-    const cortinasSection = document.querySelector('#cortinas')
-    const mesasSection = document.querySelector('#mesas')
-    const tapetesSection = document.querySelector('#tapetes')
-    const vasosSection = document.querySelector('#vasos')
-    const adicionaisSection = document.querySelector('#adicionais')
+    const initialFilter = document.getElementById('initialFilter')
 
-    const filterSection = document.querySelectorAll('.chooseCategory')
+    const boloSection = document.getElementById('boloFake');
+    const conjuntosGrandesSection = document.getElementById('conjuntosGrandes');
+    const conjuntosPequenosSection = document.getElementById('conjuntosPequenos');
+    const cortinasSection = document.getElementById('cortinas');
+    const mesasSection = document.getElementById('mesas');
+    const tapetesSection = document.getElementById('tapetes');
+    const vasosSection = document.getElementById('vasos');
+    const adicionaisSection = document.getElementById('adicionais');
 
-    function hideCategory(category) {
-        console.log("Funciona")
-        console.log(category)
+    const filterSection = document.querySelectorAll('.chooseCategory');
 
-        boloSection.classList.add('hidden')
-        conjuntosGrandesSection.classList.add('hidden')
-        conjuntosPequenosSection.classList.add('hidden')
-        cortinasSection.classList.add('hidden')
-        mesasSection.classList.add('hidden')
-        tapetesSection.classList.add('hidden')
-        vasosSection.classList.add('hidden')
-        adicionaisSection.classList.add('hidden')
+    let boldFilter = initialFilter;
+
+    function hideCategory(element) {
+        const category = element.value;
+
+        boldFilter.classList.remove('fw-bold');
+        element.classList.add('fw-bold');
+        boldFilter = element;
+
+        boloSection.classList.add('hidden');
+        conjuntosGrandesSection.classList.add('hidden');
+        conjuntosPequenosSection.classList.add('hidden');
+        cortinasSection.classList.add('hidden');
+        mesasSection.classList.add('hidden');
+        tapetesSection.classList.add('hidden');
+        vasosSection.classList.add('hidden');
+        adicionaisSection.classList.add('hidden');
+
+
 
         if (category === 'boloFake') {
-            boloSection.classList.remove('hidden')
+            boloSection.classList.remove('hidden');
         }
         if (category === 'conjuntosGrandes') {
-            conjuntosGrandesSection.classList.remove('hidden')
+            conjuntosGrandesSection.classList.remove('hidden');
         }
         if (category === 'conjuntosPequenos') {
-            conjuntosPequenosSection.classList.remove('hidden')
+            conjuntosPequenosSection.classList.remove('hidden');
         }
         if (category === 'cortinas') {
-            cortinasSection.classList.remove('hidden')
+            cortinasSection.classList.remove('hidden');
         }
         if (category === 'mesas') {
-            mesasSection.classList.remove('hidden')
+            mesasSection.classList.remove('hidden');
         }
         if (category === 'tapetes') {
             tapetesSection.classList.remove('hidden')
         }
         if (category === 'vasos') {
-            vasosSection.classList.remove('hidden')
+            vasosSection.classList.remove('hidden');
         }
         if (category === 'adicionais') {
-            adicionaisSection.classList.remove('hidden')
+            adicionaisSection.classList.remove('hidden');
         }
 
     }
 
 
-    filterSection.forEach(category => {
-        category.addEventListener('click', function () {
-            hideCategory(this.value)
-        })
+    filterSection.forEach(categoryFilter => {
+        categoryFilter.addEventListener('click', function () {
+            hideCategory(this);
+        });
     });
 
-})
+});
